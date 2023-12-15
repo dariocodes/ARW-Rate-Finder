@@ -47,7 +47,7 @@ if __name__ == '__main__':
         if filename.is_file():
             data = get_rating(filename)
             if data == 'Rating: 5':
-                print(f'Item found {filename}')
+                print(f'\n Item found {filename}')
                 shutil.copy(filename, output_directory)
  
 
