@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 import os
 import shutil
 
-def print_xmp_rating(file_path):
+def get_rating(file_path: str)-> str:
     # Run the ExifTool command with the -b option to extract binary data
     process = subprocess.Popen(['exiftool', '-XMP', '-b', file_path],
                                stdout=subprocess.PIPE,
@@ -28,14 +28,17 @@ def print_xmp_rating(file_path):
     except ET.ParseError as e:
         return("Error parsing XML:", e)
  
-# assign directory
-input_directory = '/Volumes/VIRAL 256/DCIM/107MSDCF'
-output_directory = 'output'
+if __name__ == '__main__':
+    # assign directory
+    input_directory = input(str('Path of input directory: '))
+    output_directory = input(str('Path of output directory: '))
+
+    # iterate over files in 
+    # that directory
+    for filename in os.scandir(input_directory):
+        if filename.is_file():
+            data = get_rating(filename)
+            if data == 'Rating: 5':
+                shutil.copy(filename, output_directory)
  
-# iterate over files in 
-# that directory
-for filename in os.scandir(input_directory):
-    if filename.is_file():
-        data = print_xmp_rating(filename)
-        if data == 'Rating: 5':
-            shutil.copy(filename, output_directory)
+
