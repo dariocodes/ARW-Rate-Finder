@@ -7,8 +7,13 @@ Works as follows:
 install exiftool on your device
 Download main.py and store somewhere
 
-1. Go to terminal (navigate to directory with python file)
-2. run
+1. Go to the terminal and navigate to the folder which contains your main.py
+
+```bash
+   cd Downloads/NAME_OF_FOLDER
+```
+
+2. run the python file by copy pasting the following command in your terminal
 
 ```bash
    python3 main.py
