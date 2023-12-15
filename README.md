@@ -13,3 +13,7 @@ Download main.py and store somewhere
 4. enter pathname to where you would like to process (eg: output)
 
 dependency to install: https://exiftool.org/
+
+FAQ
+How do I find the pathname on MacOS?
+https://apple.stackexchange.com/questions/317992/is-there-any-way-to-get-the-path-of-a-folder-in-macos
