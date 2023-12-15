@@ -33,12 +33,21 @@ if __name__ == '__main__':
     input_directory = input(str('Path of input directory: '))
     output_directory = input(str('Path of output directory: '))
 
+    #index how many items to process]
+    total_items = 0
+    for filename in os.scandir(input_directory):
+        total_items += 1
+
     # iterate over files in 
     # that directory
+    item_count = 0
     for filename in os.scandir(input_directory):
+        print(f'\r{item_count}/{total_items} processed', end='')
+        item_count += 1
         if filename.is_file():
             data = get_rating(filename)
             if data == 'Rating: 5':
+                print(f'Item found {filename}')
                 shutil.copy(filename, output_directory)
  
 
