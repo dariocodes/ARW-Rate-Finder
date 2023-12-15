@@ -6,9 +6,10 @@ Works as follows:
 
 install exiftool on your device
 
-1. Go to terminal (navigate to directory with python file)
-2. run $ python3 main.py
-3. enter pathname from where you would like to process (eg: /Volume/SD/DCIM/100MSDCF)
-4. enter pathname to where you would like to process (eg: output)
+1. Download main.py and store somewhere
+2. Go to terminal (navigate to directory with python file)
+3. run $ python3 main.py
+4. enter pathname from where you would like to process (eg: /Volume/SD/DCIM/100MSDCF)
+5. enter pathname to where you would like to process (eg: output)
 
 dependency to install: https://exiftool.org/
