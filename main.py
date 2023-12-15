@@ -40,7 +40,7 @@ if __name__ == '__main__':
 
     # iterate over files in 
     # that directory
-    item_count = 0
+    item_count = 1
     for filename in os.scandir(input_directory):
         print(f'\r{item_count}/{total_items} processed', end='')
         item_count += 1
