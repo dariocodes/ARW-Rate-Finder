@@ -1,34 +1,56 @@
-# Sony RAW star selector
+# Sony RAW Star Selector
 
-Finds all 5 star rated pictures of sony raw (.ARW) files from input directory and copies them to output directory
+## Overview
 
-has only been tested on Macbook M2 and Macbook Intel
+This Python script is designed for Sony photographers who shoot in RAW only format. It helps you easily find and transfer all 5-star rated RAW images from your camera to a designated folder. This tool is especially useful for streamlining your post-shoot workflow.
 
-## Tutorial
+**Compatibility:** Tested on MacBook M2 and MacBook Intel.
 
-install exiftool on your device
-Download main.py and store somewhere
+If you find this script useful, please consider starring this repository and sharing it with your community!
 
-1. Go to the terminal and navigate to the folder which contains your main.py
+## Installation
 
-```bash
-   cd Downloads/NAME_OF_FOLDER
-```
+1. **Download the Repository**
 
-2. run the python file by copy pasting the following command in your terminal
+   - Look for the green `Code` button near the top of the page.
+   - Click on the `Code` button, and then select `Download ZIP` from the dropdown menu.
+   - Once the ZIP file is downloaded, extract it to a desired location on your device. The `main.py` file is inside the extracted folder.
 
-```bash
-   python3 main.py
-```
+2. **Prepare Your Environment**
+   - Open the Terminal and navigate to the folder containing `main.py`:
+     ```bash
+     cd path/to/folder
+     ```
+   - If it's your first time running this script, install required dependencies:
+     ```bash
+     pip install -r requirements.txt
+     ```
+   - [Install exiftool](https://exiftool.org/)
 
-3. enter pathname from where you would like to process (eg: /Volume/SD/DCIM/100MSDCF)
-4. enter pathname to where you would like to process (eg: output)
+## Usage
 
-## Dependency
+1. **Run the Script**
 
-[Exiftool Install Guide](https://exiftool.org/)
+   - Execute `main.py` using the following command:
+     ```bash
+     python3 main.py
+     ```
+
+2. **Specify Directories**
+   - Enter the pathname of the source directory (e.g., `/Volume/SD/DCIM/100MSDCF`).
+   - Enter the pathname of the destination directory (e.g., `/Desktop/output`).
 
 ## FAQ
 
-How do I find the pathname on MacOS?
-https://apple.stackexchange.com/questions/317992/is-there-any-way-to-get-the-path-of-a-folder-in-macos
+**Q: How do I find the pathname on MacOS?**
+A: You can find instructions on how to locate a pathname on MacOS [here](https://apple.stackexchange.com/questions/317992/is-there-any-way-to-get-the-path-of-a-folder-in-macos).
+
+## Script Details
+
+**Dependencies:** `PIL` for image handling, `os` for file management, and `shutil` for file transfer, [Exiftool for RAW processing](https://exiftool.org/).
+
+**Functionality:**
+
+- The script scans the specified folder for .ARW images.
+- It checks each image's metadata for a 5-star rating.
+- If a 5-star image is found they are then copied to the designated output folder.
