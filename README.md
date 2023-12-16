@@ -25,7 +25,7 @@ If you find this script useful, please consider starring this repository and sha
      ```bash
      pip install -r requirements.txt
      ```
-   - [Install exiftool](https://exiftool.org/)
+     [Install exiftool](https://exiftool.org/)
 
 ## Usage
 
